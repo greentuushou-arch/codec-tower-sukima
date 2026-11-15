@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>ハンドル付きスリムワゴン tower</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#151515;
+  --ink-2:#555350;
+  --paper:#F3F2EE;
+  --white:#FFFFFF;
+  --line:#D8D6D0;
+  --wood:#A2683A;
+  --wood-soft:#F1E6DA;
+  --col:560px;
+  --gut:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:#fff;color:var(--ink);width:375px;
+  font-family:"Noto Sans JP",sans-serif;font-size:17px;line-height:1.75;
+  font-feature-settings:"palt";letter-spacing:.05em;
+}
+img{display:block;width:100%;height:auto}
+a{color:inherit}
+.en{font-family:"Jost",sans-serif;letter-spacing:.04em}
+.page{width:375px;margin:0;background:var(--white);overflow:hidden;padding-bottom:0}
+.wrap{padding:0 var(--gut)}
+
+/* ---------- FV ---------- */
+.fv{background:var(--paper);padding-top:22px}
+.fv-brand{display:flex;justify-content:space-between;align-items:center;padding:0 var(--gut)}
+.fv-brand .logo{width:auto;height:30px}
+.fv-brand small{font-size:12px;color:var(--ink-2)}
+.fv-copy{padding:26px var(--gut) 0}
+.fv-pre{font-size:18px;font-weight:700;line-height:1.5}
+.fv-copy h1{font-size:39px;font-weight:900;line-height:1.25;letter-spacing:.03em;margin-top:4px}
+.fv-copy h1 .big{display:flex;align-items:baseline;gap:.1em;color:var(--wood);line-height:1;margin:6px 0 2px}
+.fv-copy h1 .big b{font-family:"Jost";font-weight:500;font-size:128px;letter-spacing:-.02em;line-height:.9}
+.fv-copy h1 .big i{font-style:normal;font-family:"Jost";font-weight:500;font-size:45px}
+.fv-copy h1 .big span{font-size:34px;color:var(--ink)}
+.fv-copy p{margin-top:16px;font-size:17px;font-weight:500;line-height:1.7}
+.fv-photo{margin-top:22px;position:relative}
+.fv-photo .tag{position:absolute;left:var(--gut);bottom:-18px;background:var(--ink);color:#fff;font-size:13px;font-weight:700;padding:8px 14px;line-height:1.3}
+.facts{display:grid;grid-template-columns:.9fr .9fr 1.4fr;border-top:1px solid var(--ink);margin:36px var(--gut) 0;padding-bottom:22px}
+.facts div{padding:14px 0 0}
+.facts div+div{border-left:1px solid var(--line);padding-left:12px}
+.facts b{display:block;font-family:"Jost";font-weight:500;font-size:30px;line-height:1.1}
+.facts b span{font-family:"Noto Sans JP";font-size:13px;font-weight:700;margin-left:2px}
+.facts small{display:block;font-size:12.5px;line-height:1.5;color:var(--ink-2);margin-top:6px}
+
+/* ---------- section common ---------- */
+section{padding:52px 0}
+.no{font-family:"Jost";font-weight:500;font-size:15px;letter-spacing:.2em;color:var(--wood)}
+.h2{font-size:34px;font-weight:900;line-height:1.32;margin-top:6px;letter-spacing:.03em}
+.lead{margin-top:14px;font-size:17px;color:var(--ink-2)}
+.h3{font-size:24px;font-weight:900;line-height:1.4;letter-spacing:.03em}
+
+/* ---------- gap ---------- */
+.gap{background:var(--ink);color:#fff;padding:56px 0 0}
+.gap .h2{letter-spacing:.06em}
+.gap .lead{color:#C9C6BF}
+.gap .no{color:#D9A878}
+.plan{margin-top:24px;background:#1F1F1F;padding:22px var(--gut) 24px}
+.plan svg{display:block;width:100%;max-width:340px;height:auto;margin:0 auto}
+.plan p{margin-top:14px;font-size:17px;font-weight:700;line-height:1.6}
+.plan p span{color:#D9A878}
+.ghost{fill:none;stroke:#D9A878;stroke-width:1.5;stroke-dasharray:4 3}
+
+/* ---------- scene ---------- */
+.scene .block{margin-top:34px}
+.scene .block-head{display:flex;align-items:baseline;gap:12px;padding:0 var(--gut) 12px}
+.scene .block-head .en{font-size:30px;font-weight:500;line-height:1;color:var(--wood)}
+.scene .block-head b{font-size:22px;line-height:1.35}
+.kitchen{background:var(--wood-soft);margin:0 var(--gut);padding:22px 20px}
+.kitchen ul{list-style:none}
+.kitchen li{display:grid;grid-template-columns:5.2em 1fr;gap:10px;padding:10px 0;font-size:16.5px;line-height:1.6;border-top:1px solid rgba(162,104,58,.3)}
+.kitchen li:first-child{border-top:0;padding-top:0}
+.kitchen li b{font-size:16px}
+.kitchen blockquote{margin-top:16px;padding-top:16px;border-top:2px solid var(--wood);font-size:16.5px;font-weight:700;line-height:1.75}
+.kitchen cite{display:block;margin-top:6px;font-style:normal;font-weight:400;font-size:13.5px;color:var(--ink-2)}
+.scene .note{padding:14px var(--gut) 0;font-size:16.5px}
+.scene .note b{display:block;font-size:20px;margin-bottom:4px}
+
+/* ---------- shelves ---------- */
+.shelves{background:var(--paper)}
+.shelf-wrap{display:grid;grid-template-columns:38% 1fr;gap:16px;align-items:start;margin-top:24px}
+.shelf-wrap svg{display:block;width:100%;height:auto}
+.shelf-list{list-style:none}
+.shelf-list li{padding:0 0 14px;margin-bottom:14px;border-bottom:1px solid var(--line);font-size:15.5px;line-height:1.6}
+.shelf-list li:last-child{margin-bottom:0}
+.shelf-list li>b{display:flex;align-items:baseline;gap:6px;font-size:16px;margin-bottom:4px}
+.shelf-list li>b .en{font-size:28px;font-weight:500;line-height:1;color:var(--wood)}
+.shelf-list li>b .en small{font-size:15px}
+.shelf-list span{display:block}
+.shelf-list span i{font-style:normal;font-weight:700;font-size:13px;color:var(--ink-2);margin-right:6px}
+.shelves .foot{margin-top:18px;font-size:14.5px;color:var(--ink-2)}
+
+/* ---------- points ---------- */
+.point img{margin-top:24px}
+.point .after{padding:16px var(--gut) 0;font-size:16.5px}
+.point.alt{background:var(--paper)}
+
+/* ---------- numbers ---------- */
+.nums{background:var(--ink);color:#fff;padding:50px 0}
+.nums .no{color:#D9A878}
+.nums .h2{font-size:29px}
+.num-grid{display:grid;grid-template-columns:1fr 1fr;margin-top:20px;border-top:1px solid #3A3A3A}
+.num-grid div{padding:16px 0;border-bottom:1px solid #3A3A3A}
+.num-grid div:nth-child(odd){padding-right:14px;border-right:1px solid #3A3A3A}
+.num-grid div:nth-child(even){padding-left:16px}
+.num-grid b{display:block;font-family:"Jost";font-weight:500;font-size:48px;line-height:1}
+.num-grid b span{font-size:18px;margin-left:2px}
+.num-grid b.jp{font-family:"Noto Sans JP";font-weight:900;font-size:30px;line-height:1.6}
+.num-grid small{display:block;margin-top:8px;font-size:14.5px;color:#BDBAB3;line-height:1.5}
+
+/* ---------- color ---------- */
+.color img{margin-top:22px}
+.color-cap{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 var(--gut);margin-top:6px}
+.color-cap p{font-size:15.5px;line-height:1.6}
+.color-cap b{display:flex;align-items:center;gap:8px;font-size:18px;margin-bottom:4px}
+.color-cap i{width:18px;height:18px;border-radius:50%;border:1px solid #999;flex:none}
+
+/* ---------- voice ---------- */
+.voice{background:var(--paper)}
+.quotes{margin-top:18px}
+.quotes blockquote{padding:18px 0;border-top:1px solid var(--line);font-size:17px;line-height:1.85}
+.quotes blockquote:last-child{border-bottom:1px solid var(--line)}
+.quotes cite{display:block;margin-top:6px;font-style:normal;font-size:13.5px;color:var(--ink-2)}
+
+/* ---------- caution ---------- */
+.caution{padding:50px 0}
+.check{margin-top:16px;border-left:4px solid var(--wood);padding:4px 0 4px 18px}
+.check li{list-style:none;font-size:16.5px;line-height:1.7;padding:10px 0}
+.check li+li{border-top:1px dashed var(--line)}
+.check li b{display:block;font-size:18.5px}
+
+/* ---------- spec ---------- */
+.spec{padding:46px 0 50px;background:var(--paper)}
+.spec h2{font-family:"Jost";font-weight:500;font-size:24px;letter-spacing:.18em}
+.spec .size{margin-top:14px;background:#fff}
+table{width:100%;border-collapse:collapse;margin-top:16px;font-size:15.5px;line-height:1.6}
+th,td{text-align:left;vertical-align:top;padding:12px 0;border-top:1px solid var(--line)}
+th{width:6.5em;font-weight:700;padding-right:10px}
+tr:last-child th,tr:last-child td{border-bottom:1px solid var(--line)}
+
+/* ---------- service / banner ---------- */
+.service{padding:36px 0}
+.service ul{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.service li{list-style:none;padding:14px 0;font-size:14px;line-height:1.5;color:#D0021B}
+.service li+li{border-left:1px solid var(--line);padding-left:16px}
+.service li b{display:block;font-size:22px;font-weight:900;line-height:1.3}
+.related{padding:0 0 44px}
+.tower-bnr{display:block}
+.arrow{width:9px;height:9px;border-top:2px solid currentColor;border-right:2px solid currentColor;transform:rotate(45deg);flex:none}
+
+
+@media (max-width:360px){
+  :root{--gut:16px}
+  .facts b{font-size:26px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ================= FV ================= -->
+<header class="fv">
+  <div class="fv-brand">
+    <img class="logo" src="img/tower-logo.png" alt="tower" width="1337" height="357">
+    <small>山崎実業 ／ スリムワゴン</small>
+  </div>
+  <div class="fv-copy">
+    <p class="fv-pre">冷蔵庫の横、洗濯機の横。</p>
+    <h1>あきらめていた<span class="big"><b>13</b><i>cm</i><span>の</span></span>すき間が、<br>収納になる。</h1>
+    <p>幅13cmのすき間に差し込む、<br>3段のスリムワゴン。<br>使うときは、ハンドルで引き出すだけ。</p>
+  </div>
+  <div class="fv-photo">
+    <img src="img/fv.jpg" alt="洗濯機と洗面台のすき間に収まったブラックのスリムワゴン" width="485" height="606">
+    <span class="tag">ハンドル付きスリムワゴン</span>
+  </div>
+  <div class="facts">
+    <div><b>13<span>cm</span></b><small>すき間に<br>収まる幅</small></div>
+    <div><b>3<span>段</span></b><small>高さの違う<br>3つの棚</small></div>
+    <div><b>12,650<span>円</span></b><small>税込・送料無料</small></div>
+  </div>
+</header>
+
+<!-- ================= gap ================= -->
+<section class="gap">
+  <div class="wrap">
+    <p class="no en">SUKIMA</p>
+    <h2 class="h2">そのすき間、<br>何cmありますか？</h2>
+    <p class="lead">冷蔵庫とシンクのあいだ、<br>洗濯機と洗面台のあいだ。<br>13cmあれば、置き場がひとつ増えます。</p>
+  </div>
+  <div class="plan" aria-hidden="true">
+    <svg viewBox="0 0 320 250">
+      <!-- wall -->
+      <rect x="8" y="10" width="304" height="8" fill="#4A4A4A"/>
+      <text x="300" y="34" text-anchor="end" fill="#8E8B85" font-size="11" font-family="Noto Sans JP">上から見ると</text>
+      <!-- left appliance -->
+      <rect x="14" y="20" width="128" height="128" fill="#2E2E2E" stroke="#8E8B85" stroke-width="1.5"/>
+      <text id="labelL" x="78" y="90" text-anchor="middle" fill="#fff" font-size="15" font-weight="700" font-family="Noto Sans JP">冷蔵庫</text>
+      <!-- right counter -->
+      <rect x="170" y="20" width="136" height="118" fill="#2E2E2E" stroke="#8E8B85" stroke-width="1.5"/>
+      <text id="labelR" x="238" y="85" text-anchor="middle" fill="#fff" font-size="15" font-weight="700" font-family="Noto Sans JP">シンク台</text>
+      <!-- wagon (13 x 47.5cm, 2px = 1cm) -->
+      <rect class="ghost" x="144" y="85" width="24" height="95"/>
+      <path d="M156 128 v40 m-5 -6 l5 6 l5 -6" stroke="#D9A878" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <g class="wagon">
+        <rect x="144" y="21" width="24" height="95" fill="#A2683A"/>
+        <rect x="147" y="27" width="18" height="82" fill="none" stroke="#F1E6DA" stroke-width="1" opacity=".55"/>
+        <rect x="143" y="114" width="26" height="6" fill="#fff"/>
+      </g>
+      <!-- dimension -->
+      <line x1="143" y1="150" x2="143" y2="214" stroke="#D9A878" stroke-width="1" stroke-dasharray="3 3"/>
+      <line x1="169" y1="140" x2="169" y2="214" stroke="#D9A878" stroke-width="1" stroke-dasharray="3 3"/>
+      <path d="M143 206 H169 M143 206 l6 -4 M143 206 l6 4 M169 206 l-6 -4 M169 206 l-6 4" stroke="#D9A878" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <text x="156" y="238" text-anchor="middle" fill="#D9A878" font-size="22" font-weight="500" font-family="Jost">13cm</text>
+      <text x="292" y="236" text-anchor="end" fill="#8E8B85" font-size="11" font-family="Noto Sans JP">手前</text>
+    </svg>
+    <p>奥行き47.5cmのワゴンが、<br><span>すき間にすっぽり</span>収まります。<br>使うときはハンドルで引き出すだけ。</p>
+  </div>
+</section>
+
+<!-- ================= scene ================= -->
+<section class="scene">
+  <div class="wrap">
+    <p class="no en">SCENE</p>
+    <h2 class="h2">キッチンでも、<br>洗面所でも。</h2>
+    <p class="lead">スチール製だから、水まわりでも安心。<br>家じゅうの“13cm”が、置き場所の候補です。</p>
+  </div>
+
+  <div class="block">
+    <div class="block-head"><span class="en">A</span><b>キッチンで、<br>ストックの定位置に。</b></div>
+    <div class="kitchen">
+      <ul>
+        <li><b>冷蔵庫の横</b>調味料・油・水のストック</li>
+        <li><b>シンクの横</b>洗剤・スポンジの買い置き</li>
+        <li><b>食器棚の横</b>缶詰・乾物・レトルト</li>
+      </ul>
+      <blockquote>シンクと冷蔵庫の間のスペースが気になり、調味料や水のストックを置きたくて購入しました。<cite>購入者さまのレビューより</cite></blockquote>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-head"><span class="en">B</span><b>洗面所で、<br>洗濯まわりをひとまとめ。</b></div>
+    <img src="img/laundry.jpg" alt="洗濯機と洗面台のすき間に置いたホワイトのスリムワゴン" width="760" height="760">
+    <p class="note"><b>洗濯機と洗面台のあいだに。</b>洗剤の詰め替え、タオル、ヘアケア用品。床に置きっぱなしだった物の行き先ができます。</p>
+  </div>
+</section>
+
+<!-- ================= shelves ================= -->
+<section class="shelves">
+  <div class="wrap">
+    <p class="no en">3 SHELVES</p>
+    <h2 class="h2">高さの違う3段で、<br>入れ分ける。</h2>
+    <div class="shelf-wrap">
+      <svg viewBox="0 0 140 250" aria-hidden="true">
+        <!-- side view, 2.6px = 1cm -->
+        <rect x="6" y="14" width="128" height="7" fill="#A2683A"/>
+        <rect x="10" y="21" width="5" height="196" fill="#151515"/>
+        <rect x="125" y="21" width="5" height="196" fill="#151515"/>
+        <rect x="10" y="59" width="120" height="4" fill="#151515"/>
+        <rect x="10" y="120" width="120" height="4" fill="#151515"/>
+        <rect x="10" y="204" width="120" height="4" fill="#151515"/>
+        <line x1="15" y1="47" x2="125" y2="47" stroke="#151515" stroke-width="2"/>
+        <line x1="15" y1="104" x2="125" y2="104" stroke="#151515" stroke-width="2"/>
+        <line x1="15" y1="186" x2="125" y2="186" stroke="#151515" stroke-width="2"/>
+        <circle cx="22" cy="224" r="6" fill="#151515"/>
+        <circle cx="118" cy="224" r="6" fill="#151515"/>
+        <text x="70" y="45" text-anchor="middle" font-family="Jost" font-size="17" font-weight="500" fill="#A2683A">14.5</text>
+        <text x="70" y="98" text-anchor="middle" font-family="Jost" font-size="20" font-weight="500" fill="#A2683A">23.5</text>
+        <text x="70" y="172" text-anchor="middle" font-family="Jost" font-size="24" font-weight="500" fill="#A2683A">32.5</text>
+        <text x="70" y="246" text-anchor="middle" font-family="Noto Sans JP" font-size="10" fill="#555350">棚の高さ（cm）</text>
+      </svg>
+      <ul class="shelf-list">
+        <li><b>上段<span class="en">14.5<small>cm</small></span></b><span><i>台所</i>スパイス・小瓶・缶詰</span><span><i>洗面</i>ヘアワックス・小物</span></li>
+        <li><b>中段<span class="en">23.5<small>cm</small></span></b><span><i>台所</i>調味料ボトル・乾物</span><span><i>洗面</i>スプレー・タオル</span></li>
+        <li><b>下段<span class="en">32.5<small>cm</small></span></b><span><i>台所</i>ペットボトル・油</span><span><i>洗面</i>シャンプー・洗剤</span></li>
+      </ul>
+    </div>
+    <p class="foot">背の高い物は下段へ。<br>棚の前には、落下防止のバー付き。</p>
+  </div>
+</section>
+
+<!-- ================= 01 handle ================= -->
+<section class="point">
+  <div class="wrap">
+    <p class="no en">POINT 01</p>
+    <h2 class="h2">引き出せば、<br>奥までさっと取れる。</h2>
+    <p class="lead">前面にハンドル、脚にキャスター。<br>すき間から引き出して、<br>使ったら押し戻すだけ。</p>
+  </div>
+  <img src="img/handle.jpg" alt="ハンドルを持ってスリムワゴンを引き出している様子" width="760" height="760">
+</section>
+
+<!-- ================= 02 top ================= -->
+<section class="point alt">
+  <div class="wrap">
+    <p class="no en">POINT 02</p>
+    <h2 class="h2">木目の天板は、<br>ちょい置き場所。</h2>
+    <p class="lead">ブラシや小物を、さっと置ける天板。<br>モノトーンのワゴンに、<br>木目がやさしく効きます。</p>
+  </div>
+  <img src="img/top.jpg" alt="木目の天板にブラシとボトルを置いた様子" width="760" height="760">
+</section>
+
+<!-- ================= 03 steel ================= -->
+<section class="point">
+  <div class="wrap">
+    <p class="no en">POINT 03</p>
+    <h2 class="h2">水まわりでも、<br>安心のスチール製。</h2>
+    <p class="lead">本体はキズやサビに強い、<br>粉体塗装のスチール。<br>キッチンにも洗面所にも置けます。</p>
+  </div>
+  <img src="img/steel.jpg" alt="ブラックのスリムワゴンにボトルやタオルを収納した様子" width="760" height="760">
+</section>
+
+<!-- ================= numbers ================= -->
+<section class="nums">
+  <div class="wrap">
+    <p class="no en">SPEC</p>
+    <h2 class="h2">選ぶ理由は、<br>この4つ。</h2>
+    <div class="num-grid">
+      <div><b class="en">13<span>cm</span></b><small>この幅のすき間に<br>収まるスリムさ。</small></div>
+      <div><b class="en">3<span>段</span></b><small>高さ違いの棚で<br>入れ分けられる。</small></div>
+      <div><b class="en">80.5<span>cm</span></b><small>ワゴンの高さ。<br>天板はちょい置きに。</small></div>
+      <div><b class="jp">キャスター</b><small>ハンドルで引き出し、<br>押し戻すだけ。</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= color ================= -->
+<section class="color">
+  <div class="wrap">
+    <p class="no en">COLOR</p>
+    <h2 class="h2">置く場所に合わせて、<br>白か黒か。</h2>
+  </div>
+  <img src="img/color.jpg" alt="ホワイトとブラックのスリムワゴン" width="760" height="616">
+  <div class="color-cap">
+    <p><b><i style="background:#fff"></i>ホワイト</b>白い家電や洗面台に<br>なじみます。</p>
+    <p><b><i style="background:#151515"></i>ブラック</b>空間が引き締まり、<br>木目が映えます。</p>
+  </div>
+</section>
+
+<!-- ================= voice ================= -->
+<section class="voice">
+  <div class="wrap">
+    <p class="no en">VOICE</p>
+    <h2 class="h2">使った人の声</h2>
+    <div class="quotes">
+      <blockquote>シンクと冷蔵庫の間のスペースが気になり、調味料や水のストックを置きたくて購入しました。<cite>2024/09/13 購入者さま</cite></blockquote>
+      <blockquote>大きなペットボトルもストックできるので便利です。<cite>2024/09/22 購入者さま</cite></blockquote>
+      <blockquote>設置場所候補も多く、使いやすい商品でした。<cite>2024/02/23 購入者さま</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ================= caution ================= -->
+<section class="caution">
+  <div class="wrap">
+    <p class="no en">CHECK</p>
+    <h2 class="h2">ご購入の前に、<br>すき間の幅を確認。</h2>
+    <ul class="check">
+      <li><b>幅13cm以上のすき間が必要です。</b>奥行き47.5cm・高さ80.5cmも<br>あわせてご確認を。</li>
+      <li><b>入れたい物の高さも確認を。</b>棚の高さは上から<br>14.5／23.5／32.5cmです。</li>
+      <li><b>重い物の載せすぎにご注意を。</b>クッションフロアなど床材によっては、動かしにくくなることがあります。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= spec ================= -->
+<section class="spec">
+  <div class="wrap">
+    <h2>SIZE ＆ SPEC</h2>
+    <img class="size" src="img/size.jpg" alt="サイズ 幅13cm 奥行47.5cm 高さ80.5cm 棚の高さ14.5cm 23.5cm 32.5cm" width="760" height="760">
+    <table>
+      <tr><th>商品名</th><td>ハンドル付きスリムワゴン タワー</td></tr>
+      <tr><th>カラー</th><td>ホワイト／ブラック</td></tr>
+      <tr><th>サイズ</th><td>約W13×D47.5×H80.5cm</td></tr>
+      <tr><th>棚の高さ</th><td>上段14.5cm／中段23.5cm／<br>下段32.5cm</td></tr>
+      <tr><th>重量</th><td>約4.7kg</td></tr>
+      <tr><th>素材</th><td>本体：スチール（粉体塗装）<br>天板：天然木化粧繊維板<br>（ラッカー塗装）<br>キャスター：ナイロン樹脂</td></tr>
+      <tr><th>付属品</th><td>スパナ</td></tr>
+      <tr><th>箱サイズ</th><td>約 横49×奥行き15×高さ80cm</td></tr>
+      <tr><th>JAN</th><td>ホワイト 4903208036276<br>ブラック 4903208036283</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ================= service / banner ================= -->
+<div class="service">
+  <div class="wrap">
+    <ul>
+      <li><b>365日出荷</b>土日祝日も発送</li>
+      <li><b>ポイント5倍</b>山崎実業公式</li>
+    </ul>
+  </div>
+</div>
+
+</div>
+
+</body>
+</html>
